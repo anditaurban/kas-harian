@@ -1,0 +1,214 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background: #020617;
+  color: #f8fafc;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.toast-item {
+  animation: toast-in 220ms ease-out both;
+}
+
+.toast-hide {
+  animation: toast-out 240ms ease-in both;
+}
+
+.loading-skeleton {
+  background: linear-gradient(90deg, #e2e8f0 25%, #f8fafc 37%, #e2e8f0 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+.chart-bar {
+  min-height: 18px;
+  transition: height 240ms ease, transform 200ms ease;
+}
+
+.chart-bar:hover {
+  transform: translateY(-4px);
+}
+
+html.dark .bg-slate-50,
+html.dark .hover\:bg-slate-50:hover {
+  background-color: #0f172a !important;
+}
+
+html.dark .bg-slate-50\/80,
+html.dark .hover\:bg-slate-50\/80:hover {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+}
+
+html.dark .bg-slate-50\/90 {
+  background-color: rgba(2, 6, 23, 0.9) !important;
+}
+
+html.dark .bg-slate-100,
+html.dark .hover\:bg-slate-100:hover {
+  background-color: #1e293b !important;
+}
+
+html.dark .bg-white,
+html.dark .bg-white\/90 {
+  background-color: rgba(15, 23, 42, 0.94) !important;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-blue-100 {
+  border-color: #334155 !important;
+}
+
+html.dark .text-slate-950,
+html.dark .text-slate-900,
+html.dark .text-slate-800 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+html.dark .bg-blue-50,
+html.dark .bg-brand-50 {
+  background-color: rgba(37, 99, 235, 0.16) !important;
+}
+
+html.dark .bg-emerald-50 {
+  background-color: rgba(5, 150, 105, 0.16) !important;
+}
+
+html.dark .bg-rose-50 {
+  background-color: rgba(225, 29, 72, 0.16) !important;
+}
+
+html.dark .bg-amber-50 {
+  background-color: rgba(245, 158, 11, 0.16) !important;
+}
+
+html.dark .text-blue-700,
+html.dark .text-blue-800,
+html.dark .text-blue-950 {
+  color: #bfdbfe !important;
+}
+
+html.dark .text-emerald-700 {
+  color: #6ee7b7 !important;
+}
+
+html.dark .text-rose-700 {
+  color: #fda4af !important;
+}
+
+html.dark .text-amber-700 {
+  color: #fcd34d !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+html.dark option {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+html.dark thead {
+  background-color: #111827 !important;
+}
+
+html.dark tr:hover {
+  background-color: rgba(30, 41, 59, 0.72) !important;
+}
+
+html.dark .shadow-sm,
+html.dark .shadow-soft {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28) !important;
+}
+
+html.dark .loading-skeleton {
+  background: linear-gradient(90deg, #1e293b 25%, #334155 37%, #1e293b 63%);
+  background-size: 400% 100%;
+}
+
+html.dark * {
+  scrollbar-color: #475569 transparent;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

@@ -1,0 +1,54 @@
+<section class="grid gap-4 md:gap-6">
+  <div>
+    <h2 class="text-2xl font-bold text-slate-950 md:text-3xl">Pengaturan</h2>
+    <p class="mt-2 text-sm text-slate-500">Preferensi aplikasi dan profil usaha dummy.</p>
+  </div>
+
+  <form id="settings-form" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
+    <div class="grid gap-4 md:grid-cols-2">
+      <div>
+        <label for="business-name" class="mb-2 block text-sm font-semibold text-slate-700">Nama usaha</label>
+        <input id="business-name" type="text" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+      </div>
+      <div>
+        <label for="business-owner" class="mb-2 block text-sm font-semibold text-slate-700">Pemilik</label>
+        <input id="business-owner" type="text" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+      </div>
+      <div>
+        <label for="currency" class="mb-2 block text-sm font-semibold text-slate-700">Mata uang</label>
+        <select id="currency" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+          <option value="IDR">IDR - Rupiah</option>
+          <option value="USD">USD - Dollar</option>
+        </select>
+      </div>
+      <div>
+        <label for="date-format" class="mb-2 block text-sm font-semibold text-slate-700">Format tanggal</label>
+        <select id="date-format" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+          <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+          <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mt-6 grid gap-4 md:grid-cols-2">
+      <label class="flex items-center justify-between gap-4 rounded-3xl border border-slate-200 bg-slate-50 p-4">
+        <span>
+          <span class="block text-sm font-semibold text-slate-800">Mode tampilan gelap</span>
+          <span class="mt-1 block text-xs text-slate-500">Aktifkan palet gelap untuk seluruh aplikasi.</span>
+        </span>
+        <input id="dark-mode" type="checkbox" class="h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+      </label>
+      <label class="flex items-center justify-between gap-4 rounded-3xl border border-slate-200 bg-slate-50 p-4">
+        <span>
+          <span class="block text-sm font-semibold text-slate-800">Notifikasi</span>
+          <span class="mt-1 block text-xs text-slate-500">Preferensi notifikasi dummy.</span>
+        </span>
+        <input id="notifications" type="checkbox" class="h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+      </label>
+    </div>
+
+    <div class="mt-6 flex justify-end">
+      <button type="submit" class="rounded-2xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 active:scale-[0.98]">Simpan Pengaturan</button>
+    </div>
+  </form>
+</section>

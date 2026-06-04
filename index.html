@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashflow Harian</title>
+    <script>
+      ;(() => {
+        try {
+          if (localStorage.getItem('cashflow-theme') === 'dark') {
+            document.documentElement.classList.add('dark')
+          }
+        } catch (error) {
+          document.documentElement.classList.remove('dark')
+        }
+      })()
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8'
+              },
+              success: '#059669',
+              danger: '#e11d48',
+              warning: '#f59e0b'
+            },
+            boxShadow: {
+              soft: '0 18px 45px rgba(15, 23, 42, 0.08)'
+            },
+            borderRadius: {
+              '3xl': '1.5rem'
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body class="min-h-screen overflow-x-hidden bg-slate-50 text-slate-950 antialiased">
+    <div id="app-shell" class="min-h-screen">
+      <div id="sidebar-component"></div>
+      <div class="lg:ml-72">
+        <div id="topbar-component"></div>
+        <main id="app" class="mx-auto min-h-[calc(100vh-88px)] w-full max-w-7xl p-4 pb-28 md:p-6 lg:p-8"></main>
+      </div>
+      <div id="mobile-menu-component"></div>
+    </div>
+
+    <div id="toast-container" class="fixed right-4 top-4 z-[80] flex w-[calc(100%-2rem)] max-w-sm flex-col gap-3"></div>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

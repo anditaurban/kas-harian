@@ -1,0 +1,40 @@
+<section class="grid gap-4 md:gap-6">
+  <div>
+    <h2 class="text-2xl font-bold text-slate-950 md:text-3xl">Kategori</h2>
+    <p class="mt-2 text-sm text-slate-500">Kelola kategori pemasukan dan pengeluaran dummy.</p>
+  </div>
+
+  <form id="category-form" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
+    <div class="grid gap-4 md:grid-cols-[0.45fr_1fr_auto] md:items-end">
+      <div>
+        <label for="new-category-type" class="mb-2 block text-sm font-semibold text-slate-700">Jenis kategori</label>
+        <select id="new-category-type" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+          <option value="income">Pemasukan</option>
+          <option value="expense">Pengeluaran</option>
+        </select>
+      </div>
+      <div>
+        <label for="new-category-name" class="mb-2 block text-sm font-semibold text-slate-700">Nama kategori</label>
+        <input id="new-category-name" type="text" placeholder="Contoh: Komisi marketplace" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+      </div>
+      <button type="submit" class="rounded-2xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 active:scale-[0.98]">Tambah Kategori</button>
+    </div>
+  </form>
+
+  <div class="grid gap-4 lg:grid-cols-2">
+    <section class="grid gap-4">
+      <div class="flex items-center justify-between gap-4">
+        <h3 class="text-lg font-semibold text-slate-900">Pemasukan</h3>
+        <span id="income-category-count" class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">0 kategori</span>
+      </div>
+      <div id="income-category-list" class="grid gap-4 sm:grid-cols-2"></div>
+    </section>
+    <section class="grid gap-4">
+      <div class="flex items-center justify-between gap-4">
+        <h3 class="text-lg font-semibold text-slate-900">Pengeluaran</h3>
+        <span id="expense-category-count" class="rounded-full bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700">0 kategori</span>
+      </div>
+      <div id="expense-category-list" class="grid gap-4 sm:grid-cols-2"></div>
+    </section>
+  </div>
+</section>
