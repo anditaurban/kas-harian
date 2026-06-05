@@ -826,11 +826,15 @@ function getStoredTheme() {
 }
 
 function getApiBaseUrl() {
+  const productionUrl = 'https://my-cashflow-api-production.up.railway.app'
+
   try {
-    return localStorage.getItem('cashflow-api-base-url') || 'http://localhost:3000'
+    localStorage.setItem('cashflow-api-base-url', productionUrl)
   } catch (error) {
-    return 'http://localhost:3000'
+    // Ignore storage restrictions and keep the production API URL active.
   }
+
+  return productionUrl
 }
 
 function renderCategorySummary(items) {
